@@ -1,0 +1,6 @@
+{
+  "name": "VANGUARD Portfolio",
+  "description": "Vanguard styled creative portfolio landing page for Enkh-amgalan",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
