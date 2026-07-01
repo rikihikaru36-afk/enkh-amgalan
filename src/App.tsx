@@ -9,8 +9,9 @@ import ProfilePanel from './components/ProfilePanel';
 import GamesCabinet from './components/GamesCabinet';
 import MusicWidget from './components/MusicWidget';
 import ContactForm from './components/ContactForm';
+import AIChat from './components/AIChat';
 
-type SectionType = 'profile' | 'games' | 'music' | 'contact';
+type SectionType = 'profile' | 'games' | 'music' | 'contact' | 'ai';
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -29,6 +30,7 @@ export default function App() {
     { id: 'profile' as SectionType, label: 'Profile', desc: 'Би хэн бэ' },
     { id: 'games' as SectionType, label: 'Games', desc: 'Миний тоглоомууд' },
     { id: 'music' as SectionType, label: 'Music', desc: 'Дуртай хамтлаг' },
+    { id: 'ai' as SectionType, label: 'AI Helper', desc: 'AI-тай ярилцах' },
     { id: 'contact' as SectionType, label: 'Contact', desc: 'Холбоо барих' }
   ];
 
@@ -339,6 +341,7 @@ export default function App() {
                     {activeSection === 'profile' && 'PROFILE_CARD'}
                     {activeSection === 'games' && 'ARCADE_CABINET'}
                     {activeSection === 'music' && 'PLAYLIST_TRIBUTE'}
+                    {activeSection === 'ai' && 'AI_PORTFOLIO_HELPER'}
                     {activeSection === 'contact' && 'INQUIRE_TRANSMIT'}
                   </h2>
                 </div>
@@ -358,6 +361,7 @@ export default function App() {
                 {activeSection === 'profile' && <ProfilePanel onClose={closeSection} />}
                 {activeSection === 'games' && <GamesCabinet />}
                 {activeSection === 'music' && <MusicWidget />}
+                {activeSection === 'ai' && <AIChat />}
                 {activeSection === 'contact' && <ContactForm />}
               </div>
             </div>
